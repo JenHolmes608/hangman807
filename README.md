@@ -7,3 +7,5 @@ milestone_2: This file defines a list of fruit and selects one at random.
 Then it asks the user to input a single letter and checks that the input is valid.
 
 milestone_3: This file includes two functions which asks the user to input a word and then checks if it is in the randomoly selected word.
+
+milestone_4: This file creates the Hangman class. It uses the __init_ method to introduce relavent attributes and uses methods that ask the user to guess a letter. It keeps track of the letters the user has guessed.
