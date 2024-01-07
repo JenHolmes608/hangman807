@@ -2,7 +2,7 @@ import random
 
 class Hangman:
     def __init__(self, word_list, num_lives):
-        self.num_lives = 5
+        self.num_lives = num_lives
         self.word_list = word_list
     
         self.word = random.choice(self.word_list)
@@ -39,6 +39,6 @@ class Hangman:
             elif guess in self.list_of_guesses:
                 print("You already tried that letter!")
             else:
-                check_guess(guess)
+                self.check_guess(guess)
                 self.list_of_guesses.append(guess)
     
