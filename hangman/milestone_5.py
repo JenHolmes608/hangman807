@@ -1,5 +1,6 @@
 import random
 
+
 class Hangman:
     '''
     This class contains the code needed to run the play_function below for a 'Hangman' style game. 
@@ -8,6 +9,35 @@ class Hangman:
     The user then guesses letters and the code checks to see if they are in the selected word.
     The code keeps track of letters guessed as well as showing the user their progress of guessing the word so far.
     The code also checks the number of lives the user has left.
+
+    Parameters:
+    ----------
+    word_list: list
+        List of words to be used in the game
+    num_lives: int
+        Number of lives the player has
+    
+    Attributes:
+    ----------
+    word: str
+        The word to be guessed picked randomly from the word_list
+    word_guessed: list
+        A list of the letters of the word, with '_' for each letter not yet guessed
+        For example, if the word is 'apple', the word_guessed list would be ['_', '_', '_', '_', '_']
+        If the player guesses 'a', the list would be ['a', '_', '_', '_', '_']
+    num_letters: int
+        The number of UNIQUE letters in the word that have not been guessed yet
+    num_lives: int
+        The number of lives the player has
+    list_of_guesses: list
+        A list of the letters that have already been tried
+
+    Methods:
+    -------
+    check_letter(letter)
+        Checks if the letter is in the word.
+    ask_letter()
+        Asks the user for a letter.
     '''
     def __init__(self, word_list, num_lives):
         '''
@@ -35,6 +65,11 @@ class Hangman:
 
         If the input from the user is not in the word, the user is asked to try again and loses a life.
         If the letter guessed is in the word, the user is shown their progress.
+
+        Parameters:
+        ----------
+        guess: str
+            The guess to be checked
         '''
         guess = guess.lower()
         if guess in self.word:
@@ -69,6 +104,7 @@ class Hangman:
                 self.check_guess(guess)
                 self.list_of_guesses.append(guess)
                 break
+
 
 def play_game(word_list):
     '''
