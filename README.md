@@ -20,5 +20,6 @@ To implement running the project, git clone the repo and run the file in the ter
 ```
 python milestone_5.py
 ```
+
 To run the project, a word list must be defined, then, using the code from #milestone_5 you can define the Hangman class and play_game function. The play game function must then be called using the word list that has been created. Note that the number of lives can be altered in the play_game function.
 The project could be improved if a large list of words was already imported so that it doesn't need to be defined before running the play_game function. When the player reache one life left, they are told the have 1 lives remaining, this could also be fixed.
