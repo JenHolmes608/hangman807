@@ -125,7 +125,7 @@ def play_game(word_list):
             break
 
 
-if __name__ = "__main__":
+if __name__ == "__main__":
     word_list = ["apple", "banana", "cherry", "mango", "kiwi", "fig"]
 
     play_game(word_list)
