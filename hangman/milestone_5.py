@@ -72,12 +72,12 @@ class Hangman:
             The guess to be checked
         '''
         guess = guess.lower()
+        
         if guess in self.word:
             print(f"Good guess! {guess} is in the word.")
-            for g in self.word:
-                if g == guess:
-                    guess_index = self.word.find(guess)
-                    self.word_guessed[guess_index] = guess
+            for g in range(len(self.word)):
+                if self.word[g] == guess:
+                    self.word_guessed[g] = guess
             self.num_letters -= 1
             print(f"Your progress so far: {self.word_guessed}.")
 
@@ -122,6 +122,7 @@ def play_game(word_list):
         elif game.num_letters > 0:
             game.ask_for_input()
         elif game.num_lives != 0 and game.num_letters == 0:
+            print("Congratulations! You won the game.")
             break
 
 
@@ -129,5 +130,6 @@ if __name__ == "__main__":
     word_list = ["apple", "banana", "cherry", "mango", "kiwi", "fig"]
 
     play_game(word_list)
+
 
 
