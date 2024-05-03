@@ -1,25 +1,28 @@
-# Hangman
-Hangman is a classic game in which a player thinks of a word and the other player tries to guess that word within a certain amount of attempts.
+Hangman is a classic word guessing game in which one player thinks of a word and the other player tries to guess it letter by letter within a certain number of attempts.
 
-This is an implementation of the Hangman game, where the computer thinks of a word and the user tries to guess it. 
+This project is an implementation of the Hangman game in Python, where the computer randomly selects a word from a predefined list and the user attempts to guess it.
 
-In #milestone_2 #milestone_3 and #milestone_4 I have written sections of code that I have then put together to create the full code for the Hangman game.
+Milestones
+Milestone 2: In this stage, a list of fruit is defined, and the program selects one fruit at random. Then, it prompts the user to input a single letter and checks if the input is valid.
+Milestone 3: This file includes two functions. The first function randomly chooses a word from a list, and the second function checks if a guessed letter is present in the chosen word.
+Milestone 4: The Hangman class is created in this file. It utilizes the _init method to introduce relevant attributes and incorporates methods that prompt the user to guess a letter while keeping track of the letters guessed.
+Milestone 5: This file contains a fully working version of the Hangman game. It builds upon the code from Milestone 4 but adds a function outside of the Hangman class to run the game.
+Installation
+To run the project, follow these steps:
 
-#milestone_2: This file defines a list of fruit and selects one at random.
-Then it asks the user to input a single letter and checks that the input is a single letter.
-
-#milestone_3: This file includes two functions. A word is chosen randomly from a list. The first function works out if a guessed letter is within the chosen word. The second function asks the user to choose a letter and then runs the first function to check the guess.
-
-#milestone_4: This file creates the Hangman class. It uses the __init_ method to introduce relavent attributes and uses methods that ask the user to guess a letter. It keeps track of the letters the user has guessed.
-
-#milestone_5: This file contains a full working version of the Hangman code. It uses a lot of the code from #milestone_4 but adds a function outstide of the Hangman class which rund the code to play the Hangman game.
-
-
-To implement running the project, git clone the repo and run the file in the terminal. Python is required:
-
-```
+Clone the repository:
+bash
+Copy code
+git clone https://github.com/JenHolmes608/hangman807.git
+Navigate to the project directory:
+bash
+Copy code
+cd hangman807
+Run the Python file in the terminal:
+bash
+Copy code
 python milestone_5.py
-```
+Usage
+Once the project is set up and running, the user can play the Hangman game by guessing letters to uncover the hidden word. The number of lives can be adjusted within the play_game function. However, note that defining a word list before running the game is necessary. Improvements could include importing a large word list to eliminate the need for defining one manually and fixing the message when the player reaches one life remaining.
 
-To run the project, a word list must be defined, then, using the code from #milestone_5 you can define the Hangman class and play_game function. The play game function must then be called using the word list that has been created. Note that the number of lives can be altered in the play_game function.
-The project could be improved if a large list of words was already imported so that it doesn't need to be defined before running the play_game function. When the player reache one life left, they are told the have 1 lives remaining, this could also be fixed.
+Feel free to contribute to this project by adding features, fixing bugs, or suggesting improvements!
