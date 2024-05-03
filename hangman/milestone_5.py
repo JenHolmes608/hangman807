@@ -34,9 +34,9 @@ class Hangman:
 
     Methods:
     -------
-    check_letter(letter)
+    check_guess(letter)
         Checks if the letter is in the word.
-    ask_letter()
+    ask_for_input()
         Asks the user for a letter.
     '''
     def __init__(self, word_list, num_lives):
